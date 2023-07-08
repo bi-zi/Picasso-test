@@ -1,0 +1,15 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	color: rgb(255 255 255);
+	background-color: rgb(16 16 16);
+	font-family: 'Nunito', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
