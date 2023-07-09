@@ -1,3 +1,3 @@
-export * from "./commentsTypes"
-export * from "./postsTypes"
-export * from "./userTypes"
+export * from "./commentsTypes";
+export * from "./postsTypes";
+export * from "./userTypes";

@@ -1,9 +1,9 @@
 .user {
-	text-align: center;
-	border-radius: calc(5px + 5 * (100vw / 1920));
-	padding: calc(5px + 5 * (100vw / 1920));
 	margin: calc(5px + 5 * (100vw / 1920)) 0;
-	background: rgb(21, 21, 21);
+	padding: calc(5px + 5 * (100vw / 1920));
+	border-radius: calc(5px + 5 * (100vw / 1920));
+	text-align: center;
+	background: rgb(21 21 21);
   
 	h1 {
 	  font-size: calc(14px + 14 * (100vw / 1920));
@@ -11,17 +11,16 @@
   
 	&__info {
 	  display: flex;
-	  justify-content: space-between;
-  
 	  flex-wrap: wrap;
+	  justify-content: space-between;
   
 	  ul {
 		margin: calc(5px + 5 * (100vw / 1920));
 		text-align: left;
   
 		p {
+		  font-weight: 700;
 		  font-size: calc(12px + 12 * (100vw / 1920));
-		  font-weight: bold;
 		}
   
 		li {

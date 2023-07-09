@@ -1,34 +1,62 @@
 .item {
-	text-align: center;
-	border-radius: calc(5px + 5 * (100vw / 1920));
-	padding: calc(5px + 5 * (100vw / 1920));
 	margin: calc(5px + 5 * (100vw / 1920)) 0;
-	background: rgb(21, 21, 21);
-  
+	padding: calc(5px + 5 * (100vw / 1920));
+	border-radius: calc(5px + 5 * (100vw / 1920));
+	text-align: center;
+	background: rgb(21 21 21);
+
 	h2,
 	h3 {
-	  font-size: calc(12px + 12 * (100vw / 1920));
+		font-size: calc(12px + 12 * (100vw / 1920));
 	}
-  
-	a:hover {
-	  cursor: pointer;
-	  background-color: rgb(36, 36, 36);
-	}
-  
-	&__content {
-	  width: 100%;
-	  border-radius: calc(5px + 5 * (100vw / 1920));
-	  padding: calc(5px + 5 * (100vw / 1920));
-	  margin: calc(5px + 5 * (100vw / 1920)) 0;
-	  background: rgb(28, 28, 28);
-	  text-align: left;
-  
-	  p {
-		font-size: calc(10px + 10 * (100vw / 1920));
-		span {
-		  font-weight: bold;
+
+	form {
+		margin: 2vw 0;
+		padding: calc(5px + 5 * (100vw / 1920));
+		width: 100%;
+		border-radius: calc(5px + 5 * (100vw / 1920));
+		background: rgb(28 28 28);
+
+		fieldset {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-top: 1vw;
+
+			button:hover {
+				background: rgb(21 21 21);
+			}
+
+			input,
+			button {
+				flex-grow: 1;
+				margin: 1vw;
+				padding: calc(5px + 5 * (100vw / 1920));
+				border-radius: calc(5px + 5 * (100vw / 1920));
+				background: rgb(36 36 36);
+			}
 		}
-	  }
 	}
-  }
-  
+
+	a:hover {
+		background-color: rgb(36 36 36);
+		cursor: pointer;
+	}
+
+	&__content {
+		margin: calc(5px + 5 * (100vw / 1920)) 0;
+		padding: calc(5px + 5 * (100vw / 1920));
+		width: 100%;
+		border-radius: calc(5px + 5 * (100vw / 1920));
+		text-align: left;
+		background: rgb(28 28 28);
+
+		p {
+			font-size: calc(10px + 10 * (100vw / 1920));
+
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}

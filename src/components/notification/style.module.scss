@@ -1,0 +1,11 @@
+.noti {
+	position: fixed;
+	margin: calc(5px + 5 * (100vw / 1920)) 0;
+	padding: calc(5px + 5 * (100vw / 1920));
+	top: 10%;
+	right: 0;
+	border-top-left-radius: calc(5px + 5 * (100vw / 1920));
+	border-bottom-left-radius: calc(5px + 5 * (100vw / 1920));
+	font-size: calc(12px + 12 * (100vw / 1920));
+	background-color: rgb(50 50 50);
+}

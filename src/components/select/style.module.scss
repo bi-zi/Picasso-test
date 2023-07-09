@@ -1,14 +1,14 @@
 .select {
-  background: rgb(21, 21, 21);
-  padding: calc(5px + 5 * (100vw / 1920));
   margin: calc(5px + 5 * (100vw / 1920)) 0;
+  padding: calc(5px + 5 * (100vw / 1920));
   border-radius: calc(5px + 5 * (100vw / 1920));
+  background: rgb(21 21 21);
 }
 
 a {
   &:hover {
+    background-color: rgb(28 28 28);
     cursor: pointer;
-    background-color: rgb(28, 28, 28);
   }
 }
 
