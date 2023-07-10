@@ -23,27 +23,36 @@ export const Comments = ({ comments, postsLength }: CommentsPropsType) => {
 
 		setNotification("Вы отправили комментарий");
 
-		await fetch(
-			`https://jsonplaceholder.typicode.com/comments?postId=${commentList[0].postId}`,
-			{
-				method: "POST",
-				body: JSON.stringify({
-					name,
-					email,
-					body,
-				}),
-				headers: {
-					"Content-type": "application/json; charset=UTF-8",
-				},
+		try {
+			const response = await fetch(
+				`https://jsonplaceholder.typicode.com/comments?postId=${commentList[0].postId}`,
+				{
+					method: "POST",
+					body: JSON.stringify({
+						name,
+						email,
+						body,
+					}),
+					headers: {
+						"Content-type": "application/json; charset=UTF-8",
+					},
+				}
+			);
+
+			if (!response.ok) {
+				throw new Error("Ошибка при отправке комментария");
 			}
-		)
-			.then(response => response.json())
-			.then(json => {
-				setCommentList([...commentList, json]);
-				setName("");
-				setEmail("");
-				setBody("");
-			});
+
+			const json = (await response.json()) as CommentsType;
+			setCommentList([...commentList, json]);
+			setName("");
+			setEmail("");
+			setBody("");
+		} catch (error) {
+			// Обработка ошибки при отправке комментария
+			console.error(error);
+			// Дополнительные действия, если необходимо
+		}
 	};
 
 	useEffect(() => {
